@@ -1,3 +1,32 @@
-/* body {
-    background-color: black;
+body {
+    /* background-color: black; */
+    font-family: 'Source Code Pro', monospace;
+    /* line-height: 100% */
+}
+header {
+    line-height: 100%;
+}
+
+/* nav {
+
+} */
+
+/* main {
+
+} */
+
+/* aside {
+
+} */
+
+/* footer {
+
+} */
+
+/* h1, h2 ,h3, h4, h5, h6, p {
+    color: #84c754
+}
+
+a {
+    color: aliceblue
 } */
