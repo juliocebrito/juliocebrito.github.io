@@ -48,8 +48,8 @@
           </article>
       </section>
       <section id=blog>
-        <article>
-          <h1>Blog</h1>
+        <h1>Blog</h1>
+        <article id=first>
         </article>
       </section>
     </main>
@@ -68,8 +68,8 @@
     <script src="scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
-      document.getElementById('blog').innerHTML =
-        marked.parse('# This is my Blog\n\nRendered by **marked**.');
+      document.getElementById('first').innerHTML =
+        marked.parse('# This is an test article\n\nRendered by **marked**.');
     </script>
   </body>
 </html>
