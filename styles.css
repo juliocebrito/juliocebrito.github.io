@@ -1,34 +1,160 @@
 @import url(//fonts.googleapis.com/css?family=Source+Code+Pro:200);
 
+/* Global box-sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
-    /* background-color: black; */
+    background-color: black;
+    color: #00FF00; /* lime green */
     font-family: 'Source Code Pro', monospace;
-    /* line-height: 100% */
+    line-height: 1.5; /* improved readability */
 }
+
+/* Reset default margins and paddings */
+body, h1, h2, h3, h4, h5, h6, p, ul, li, figure, figcaption, blockquote, dl, dd {
+    margin: 0;
+    padding: 0;
+}
+
 header {
-    line-height: 100%;
+    padding: 1em;
+    margin-bottom: 1em;
+    text-align: center; /* Center header content */
 }
 
-/* nav {
+/* Profile image styling */
+header img {
+    max-width: 100px; /* Smaller image */
+    border: 1px solid #00FF00; /* Green border */
+    margin-bottom: 1em; /* Space below image */
+}
 
-} */
+/* Header h1 styling */
+header h1 {
+    font-size: 2em; /* Adjust font size as needed */
+    margin-bottom: 0.5em; /* Space below h1 */
+    /* Color is inherited from body */
+}
 
-/* main {
+main { /* Added rule for main */
+    padding: 1em;
+    margin-bottom: 1em;
+}
 
-} */
+footer { /* Added rule for footer */
+    padding: 1em;
+    margin-bottom: 1em;
+    text-align: center; /* Center footer content */
+    font-size: 0.9em; /* Smaller text for footer */
+}
 
-/* aside {
+/* Ensure footer p has no extra margins */
+footer p {
+    margin: 0;
+}
 
-} */
+nav {
+    margin-bottom: 1em; /* Space below nav */
+}
 
-/* footer {
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
 
-} */
+nav li {
+    display: inline-block;
+    margin: 0 10px; /* Horizontal spacing between items */
+}
 
-/* h1, h2 ,h3, h4, h5, h6, p {
-    color: #84c754
+nav a::before {
+    content: "> ";
+    color: #00FF00; /* Terminal green for the prompt symbol */
+}
+
+/* Styling for main content sections and articles */
+main section {
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #00FF00; /* Green border for sections */
+}
+
+main article {
+    padding: 0 1em; /* Horizontal padding, vertical handled by content/section */
+    margin-bottom: 1em;
+}
+
+main section > h1 {
+    font-size: 1.5em;
+    margin-bottom: 0.75em;
+    /* Color inherited */
+}
+
+main section article h4 {
+    font-size: 1.2em;
+    margin-bottom: 0.75em;
+    margin-top: 1em; /* Space above "Trainings" heading */
+    /* Color inherited */
+}
+
+/* General paragraph styling within main */
+main p {
+    margin-bottom: 0.5em;
+    /* Color and line-height inherited */
+}
+
+/* Specific styling for training list items */
+main section article p {
+    padding-left: 1em; /* Indentation for list items */
+}
+
+main section article p::before {
+    content: "- "; /* Bullet point for list items */
+    /* Color inherited */
+}
+
+aside {
+    padding: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+aside address a {
+    margin: 0 10px; /* Horizontal spacing for social media links */
+    /* Link styling (color, hover) is inherited */
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Apply blinking cursor to the first h1 in the header */
+header h1:first-of-type::after {
+  content: '_';
+  animation: blink 1s step-start infinite;
+  margin-left: 5px; /* Adjust spacing as needed */
+  color: #00FF00; /* Cursor color, same as text */
+}
+
+/* Ensure all text-based elements inherit the body's color by default */
+h1, h2, h3, h4, h5, h6, p, ul, li, figure, figcaption, blockquote, dl, dd, address {
+    color: inherit;
 }
 
 a {
-    color: aliceblue
-} */
+    color: #ADD8E6; /* light blue */
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: #FFFFFF; /* white */
+    text-shadow: 0 0 5px #FFFFFF; /* white glow */
+    outline: none; /* Remove default focus outline if using box-shadow */
+}
