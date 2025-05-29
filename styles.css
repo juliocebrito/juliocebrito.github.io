@@ -26,9 +26,14 @@ header {
 
 /* Profile image styling */
 header img {
-    max-width: 100px; /* Smaller image */
+    width: 100%; /* Make image responsive within its container */
+    max-width: 200px; /* But limit its maximum size to 200px */
+    height: auto; /* Maintain aspect ratio */
     border: 1px solid #00FF00; /* Green border */
     margin-bottom: 1em; /* Space below image */
+    display: block; /* To enable margin auto for centering if needed */
+    margin-left: auto; /* Center the image */
+    margin-right: auto; /* Center the image */
 }
 
 /* Header h1 styling */
@@ -157,4 +162,109 @@ a:focus {
     color: #FFFFFF; /* white */
     text-shadow: 0 0 5px #FFFFFF; /* white glow */
     outline: none; /* Remove default focus outline if using box-shadow */
+}
+
+@media (max-width: 768px) {
+    /* Adjust header padding and image size */
+    header {
+        padding: 0.5em;
+    }
+
+    /* Header h1 font size */
+    header h1 {
+        font-size: 1.8em; /* Slightly smaller for mobile */
+    }
+
+    /* Navigation: Stack links vertically */
+    nav ul {
+        text-align: left; /* Align text to the left for stacked items */
+    }
+
+    nav li {
+        display: block; /* Stack navigation items */
+        margin: 10px 0; /* Vertical spacing, remove horizontal */
+        text-align: center; /* Center the text of nav links */
+    }
+
+    nav a::before {
+        content: ""; /* Remove "> " for stacked view if desired, or keep if preferred */
+    }
+    
+    nav a {
+        display: block; /* Make the whole area clickable */
+        padding: 0.5em 0; /* Add some padding for easier tapping */
+    }
+
+    /* Main content adjustments */
+    main {
+        padding: 0.5em;
+    }
+
+    main section {
+        padding: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    main section > h1 {
+        font-size: 1.3em; /* Smaller section titles */
+    }
+
+    main section article h4 {
+        font-size: 1.1em; /* Smaller article subheadings */
+    }
+
+    main p {
+        font-size: 0.9em; /* Smaller paragraph text */
+    }
+    
+    /* Reduce indentation for training list items */
+    main section article p {
+        padding-left: 0.5em; 
+    }
+
+    /* Aside: center text and manage spacing */
+    aside {
+        padding: 0.5em;
+    }
+
+    aside address a {
+        display: block; /* Stack social media links */
+        margin: 5px auto; /* Vertical spacing and center block elements */
+        padding: 0.3em 0; /* Add some padding for easier tapping */
+    }
+
+    /* Footer adjustments */
+    footer {
+        padding: 0.5em;
+        font-size: 0.8em; /* Smaller footer text */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further reduce header h1 font size */
+    header h1 {
+        font-size: 1.5em; 
+    }
+    
+    /* Further reduce profile image size if necessary - current rule for header img should handle it well, but an example: */
+    /* header img { */
+    /* max-width: 120px; /* Even smaller for very small screens */
+    /* } */
+
+    main section > h1 {
+        font-size: 1.2em; /* Smaller section titles */
+    }
+
+    main section article h4 {
+        font-size: 1em; /* Smaller article subheadings */
+    }
+
+    main p {
+        font-size: 0.85em; /* Slightly smaller paragraph text */
+    }
+
+    /* Adjust 'Past', 'Present', 'Future' section content padding */
+    main section article {
+        padding: 0 0.5em; /* Reduce horizontal padding */
+    }
 }
