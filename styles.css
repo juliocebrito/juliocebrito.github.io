@@ -93,10 +93,19 @@ main article {
     margin-bottom: 1em;
 }
 
-main section > h1 {
+/* main section > h1 {
     font-size: 1.5em;
     margin-bottom: 0.75em;
     /* Color inherited */
+/* } */
+
+main section article pre {
+    font-family: 'Source Code Pro', monospace;
+    color: #00FF00; /* lime green */
+    text-align: center;
+    font-size: 0.6em;
+    line-height: 1.2;
+    margin-bottom: 1em;
 }
 
 main section article h4 {
