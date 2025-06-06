@@ -99,6 +99,22 @@ main section > h1 {
     /* Color inherited */
 }
 
+section#past h1,
+section#present h1,
+section#future h1 {
+    /* Terminal Art style */
+    text-shadow: 1px 1px 0px #00FF00,
+                 -1px -1px 0px #00FF00,
+                 1px -1px 0px #00FF00,
+                 -1px 1px 0px #00FF00,
+                 0px 2px 0px #00FF00,
+                 0px -2px 0px #00FF00,
+                 2px 0px 0px #00FF00,
+                 -2px 0px 0px #00FF00;
+    letter-spacing: 2px;
+    /* font-size and margin-bottom are inherited from main section > h1 */
+}
+
 main section article h4 {
     font-size: 1.2em;
     margin-bottom: 0.75em;
