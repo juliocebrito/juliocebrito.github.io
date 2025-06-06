@@ -102,7 +102,7 @@ main article {
 main section article pre {
     font-family: 'Source Code Pro', monospace;
     color: #00FF00; /* lime green */
-    text-align: center;
+/*     text-align: center; */
     font-size: 0.6em;
     line-height: 1.2;
     margin-bottom: 1em;
