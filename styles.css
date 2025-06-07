@@ -22,6 +22,18 @@ header {
     padding: 1em;
     margin-bottom: 1em;
     text-align: center; /* Center header content */
+    position: relative; /* Make header position relative */
+}
+
+/* Canvas styling */
+#matrixCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place canvas behind other header content */
+    display: block; /* Prevent extra space */
 }
 
 /* Profile image styling */
@@ -34,6 +46,8 @@ header img {
     display: block; /* To enable margin auto for centering if needed */
     margin-left: auto; /* Center the image */
     margin-right: auto; /* Center the image */
+    position: relative; /* Ensure img is on top of canvas */
+    z-index: 1; /* Ensure img is on top of canvas */
 }
 
 /* Header h1 styling */
@@ -41,6 +55,8 @@ header h1 {
     font-size: 2em; /* Adjust font size as needed */
     margin-bottom: 0.5em; /* Space below h1 */
     /* Color is inherited from body */
+    position: relative; /* Ensure h1 is on top of canvas */
+    z-index: 1; /* Ensure h1 is on top of canvas */
 }
 
 main { /* Added rule for main */
